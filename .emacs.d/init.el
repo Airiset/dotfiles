@@ -21,6 +21,9 @@
 ;; set emacs GUI frames to start maximized on Windows
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;; change gpg key directory to the default in my home directory
+(setq package-gnupghome-dir nil)
+
 ;; stop screen from jumping if the cursor goes off-screen
 (setq scroll-conservatively 101)
 
@@ -51,7 +54,8 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("be73fbde027b9df15a98a044bcfff4d46906b653cb6eef0d98ebccb7f8425dc9" "a1cc9036090e5af910b9f28ac460bb3b0eea513637fc2663e454cad14d70e5db" default))
- '(package-selected-packages '(markdown-mode autothemer)))
+ '(package-selected-packages
+   '(org gnu-elpa-keyring-update list-packages-ext company markdown-mode autothemer)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
